@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1316242691}
   - component: {fileID: 1316242690}
   - component: {fileID: 1316242689}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,9 +248,10 @@ GameObject:
   - component: {fileID: 1430158350}
   - component: {fileID: 1430158349}
   - component: {fileID: 1430158348}
+  - component: {fileID: 1430158351}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +320,24 @@ Transform:
   - {fileID: 1491596389}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1430158351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430158347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12134f0ee5df6f34fa7e81ccd0143221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  movementSpeed: 5
+  moveDeadzone: 0.15
+  cameraTransform: {fileID: 1491596389}
+  lookSensitivity: 180
+  lookDeadzone: 0.15
+  invertY: 0
 --- !u!1 &1491596388
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +575,7 @@ GameObject:
   - component: {fileID: 1851193751}
   m_Layer: 0
   m_Name: Directional Light
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

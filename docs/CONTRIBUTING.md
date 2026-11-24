@@ -7,27 +7,40 @@
 ## git 指令
 > 請先在電腦下載 git
 ### 初始化
+1. 在 cmd cd到專案資料夾
 
-1. 在 unity 創建 Zombie 專案
-
-2. 在 cmd cd到專案資料夾
-
-3. 建立 .git
+2. 建立 .git
 ```text
 git init
 ```
 
-4. 與 GitHub 連結
+3. 與 GitHub 連結
 ```text
 git remote add origin https://github.com/Markchang522/Zombie.git
 ```
 
-5. 下載目前進度
+4. 下載目前進度(將 .ignore 下載下來，避免 commit 的時候包含了不必要檔案)
 ```text
 git pull origin main --allow-unrelated-histories
 ```
 
-### 開發中commit
+### 將 GitHub 現有的專案下載下來
+**不需要新開專案**
+
+1. cd 到存放資料夾
+
+2. 將專案 clone 下來
+```
+git clone https://github.com/Markchang522/Zombie.git
+```
+Git 會在目前目錄下自動建立與專案同名的資料夾並下載所有檔案。
+
+3. 用 Unity Hub 加入專案
+```
+新增 > 從硬碟新增專案
+```
+首次開啟會花一點時間重建
+### 開發中 commit
 
 > - **先將專案 pull 再開始做**
 > - **做到一個進度就 commit 一次**

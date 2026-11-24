@@ -20,6 +20,7 @@
 ## - 2026-11-24(by張晨煥)
 ### Added
 - 在 contributing 新增 clone 用法
+- 角色射擊、換子彈動畫(還需調整時間)
 
 ### Changed
 - 無

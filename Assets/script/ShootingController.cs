@@ -30,6 +30,14 @@ public class ShootingController : MonoBehaviour
     [Tooltip("步槍的 Animator 元件（需包含 Bool 參數 shoot 與 Trigger 參數 reload）")]
     public Animator animator;
 
+    [Header("Sound Effects")]
+    [Tooltip("播放音效用的 AudioSource 元件")]
+    public AudioSource soundAudioSource;
+    [Tooltip("射擊音效片段")]
+    public AudioClip shootingSoundClip;
+    [Tooltip("換彈音效片段")]
+    public AudioClip reloadSoundClip;
+
     private int currentAmmo;
     private float nextFireTime = 0f;
     private float singleShotAnimEndTime = 0f;
@@ -134,6 +142,11 @@ public class ShootingController : MonoBehaviour
         singleShotAnimEndTime = Time.time + singleShotAnimDuration;
         SetShootAnim(true);
 
+        if (soundAudioSource != null && shootingSoundClip != null)
+        {
+            soundAudioSource.PlayOneShot(shootingSoundClip);
+        }
+
         Debug.Log($"[Shoot] 剩餘子彈: {currentAmmo}/{maxAmmo}");
 
         RaycastHit hit;
@@ -158,6 +171,11 @@ public class ShootingController : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("reload");
+        }
+
+        if (soundAudioSource != null && reloadSoundClip != null)
+        {
+            soundAudioSource.PlayOneShot(reloadSoundClip);
         }
 
         Debug.Log($"[Reload] 換彈中...（{reloadTime} 秒）");

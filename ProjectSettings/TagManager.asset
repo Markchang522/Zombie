@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - zombie
   - ground
+  - zombie2
+  - zombie3
+  - zombie4
+  - zombie1
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,10 @@ public class ShootingController : MonoBehaviour
     public float fireRate = 10f;
     [Tooltip("射線最大射程")]
     public float fireRange = 25f;
+    [Tooltip("每次射擊對殭屍造成的傷害")]
+    public int damagePerShot = 10;
+    [Tooltip("射線可命中的圖層（建議在 Inspector 取消勾選 Player 圖層）")]
+    public LayerMask hitMask = ~0;
 
     [Header("Fire Mode & Trigger")]
     [Tooltip("勾選為全自動（按住右扳機連發）；取消勾選為單發（扣下右扳機觸發一次）")]
@@ -149,10 +153,34 @@ public class ShootingController : MonoBehaviour
 
         Debug.Log($"[Shoot] 剩餘子彈: {currentAmmo}/{maxAmmo}");
 
+        Debug.DrawRay(firePoint.position, firePoint.forward * fireRange, Color.red, 1f);
+
         RaycastHit hit;
-        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, fireRange))
+        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, fireRange, hitMask, QueryTriggerInteraction.Ignore))
         {
-            Debug.Log("[Shoot] 擊中: " + hit.transform.name);
+            Debug.Log($"[Shoot Check] hit.collider.name={hit.collider.name} | hit.transform.name={hit.transform.name} | hit.transform.root.name={hit.transform.root.name}");
+
+            ZombieHealth zombieHealth = hit.collider.GetComponentInParent<ZombieHealth>();
+            if (zombieHealth != null)
+            {
+                if (!zombieHealth.isDead)
+                {
+                    zombieHealth.TakeDamage(damagePerShot);
+                    Debug.Log($"[Zombie Hit] 擊中 {zombieHealth.gameObject.name}（部位: {hit.collider.name}），造成 {damagePerShot} 傷害｜剩餘血量: {zombieHealth.currentHealth}/{zombieHealth.maxHealth}");
+                }
+                else
+                {
+                    Debug.Log($"[Zombie Hit] {zombieHealth.gameObject.name} 已死亡｜目前血量: {zombieHealth.currentHealth}/{zombieHealth.maxHealth}");
+                }
+            }
+            else
+            {
+                Debug.Log($"[Shoot] 擊中非殭屍物件: {hit.transform.name}");
+            }
+        }
+        else
+        {
+            Debug.Log("[Shoot] 未擊中任何物件");
         }
 
         if (currentAmmo <= 0)

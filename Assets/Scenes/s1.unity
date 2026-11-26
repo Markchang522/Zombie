@@ -747,6 +747,7 @@ GameObject:
   - component: {fileID: 1430158348}
   - component: {fileID: 1430158351}
   - component: {fileID: 1430158352}
+  - component: {fileID: 1430158353}
   m_Layer: 7
   m_Name: player
   m_TagString: Player
@@ -945,6 +946,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1430158353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430158347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd79176031fe4224f8bb3302a3267c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
+  currentHealth: 0
+  isDead: 0
 --- !u!1 &1491596388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1697,7 @@ MonoBehaviour:
   firePoint: {fileID: 1491596389}
   fireRate: 10
   fireRange: 25
+  damagePerShot: 10
   isAuto: 1
   triggerThreshold: 0.5
   singleShotAnimDuration: 0.12

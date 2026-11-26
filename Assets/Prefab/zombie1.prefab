@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieWaypointPatrol
   waypoints: []
-  patrolMode: 0
+  patrolMode: 2
   arrivalThreshold: 0.5
   waitTimeAtPoint: 0.5
 --- !u!1 &6517445122205888655

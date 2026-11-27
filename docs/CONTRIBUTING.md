@@ -49,9 +49,9 @@ Git 會在目前目錄下自動建立與專案同名的資料夾並下載所有�
 ```text
 git pull origin main
 ```
-如果電腦有做東西但還沒 pull，改成
+如果電腦有做東西但還沒 pull 最新版本先做步驟2、3，再 pull 最新進度。
 ```text
-git pull origin main --allow-unrelated-histories
+git pull --rebase origin main
 ```
 
 
@@ -63,10 +63,10 @@ git add .
 
 3. 存檔並寫下 Commit 訊息。
 ```text
-git commit -m "feat(auth): 新增登入頁面"
+git commit -m "commit 訊息(格式看下一欄)"
 ```
 
-5. 將所有 Commit 上傳 GitHub
+4. 將所有 Commit 上傳 GitHub
 ```text
 git push origin main
 ```

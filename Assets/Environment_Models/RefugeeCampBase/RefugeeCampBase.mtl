@@ -1,0 +1,134 @@
+# Material library for RefugeeCampBase
+
+newmtl GroundMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.040 0.040 0.040
+Ns 6.0
+d 1.0
+illum 2
+map_Kd camp_ground.png
+
+newmtl HelipadMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.080 0.080 0.080
+Ns 12.0
+d 1.0
+illum 2
+map_Kd camp_helipad.png
+
+newmtl ConcreteMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.080 0.080 0.080
+Ns 14.0
+d 1.0
+illum 2
+map_Kd camp_concrete.png
+
+newmtl HazardMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.120 0.120 0.120
+Ns 20.0
+d 1.0
+illum 2
+map_Kd camp_hazard.png
+
+newmtl CanvasOliveMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.040 0.040 0.040
+Ns 6.0
+d 1.0
+illum 2
+map_Kd camp_canvas_olive.png
+
+newmtl CanvasMedMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.040 0.040 0.040
+Ns 6.0
+d 1.0
+illum 2
+map_Kd camp_canvas_med.png
+
+newmtl CanvasKhakiMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.040 0.040 0.040
+Ns 6.0
+d 1.0
+illum 2
+map_Kd camp_canvas_khaki.png
+
+newmtl SandbagMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.030 0.030 0.030
+Ns 5.0
+d 1.0
+illum 2
+map_Kd camp_sandbag.png
+
+newmtl CorrugatedMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.280 0.280 0.280
+Ns 36.0
+d 1.0
+illum 2
+map_Kd camp_corrugated.png
+
+newmtl ContainerMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.250 0.250 0.250
+Ns 32.0
+d 1.0
+illum 2
+map_Kd camp_container.png
+
+newmtl WoodMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.060 0.060 0.060
+Ns 10.0
+d 1.0
+illum 2
+map_Kd camp_wood.png
+
+newmtl MetalMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.350 0.350 0.350
+Ns 48.0
+d 1.0
+illum 2
+map_Kd camp_metal.png
+
+newmtl BarrelMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.280 0.280 0.280
+Ns 36.0
+d 1.0
+illum 2
+map_Kd camp_barrel.png
+
+newmtl DarkMat
+Ka 0.2 0.2 0.2
+Kd 0.080 0.080 0.090
+Ks 0.020 0.020 0.020
+Ns 4.0
+d 1.0
+illum 2
+
+newmtl LightMat
+Ka 0.2 0.2 0.2
+Kd 0.980 0.940 0.800
+Ks 0.500 0.500 0.500
+Ns 64.0
+d 1.0
+illum 2

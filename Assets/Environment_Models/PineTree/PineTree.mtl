@@ -1,0 +1,19 @@
+# Material library for PineTree
+
+newmtl BarkMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.050 0.050 0.050
+Ns 8.0
+d 1.0
+illum 2
+map_Kd tree_bark.png
+
+newmtl NeedlesMat
+Ka 0.2 0.2 0.2
+Kd 1.000 1.000 1.000
+Ks 0.040 0.040 0.040
+Ns 6.0
+d 1.0
+illum 2
+map_Kd tree_needles.png
